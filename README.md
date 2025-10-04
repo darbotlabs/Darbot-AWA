@@ -1,9 +1,15 @@
-# ✨ The Agentics
+# 🤖 Darbot Agentic Workflow Automation (AWA)
 
-A sample family of reusable [GitHub Agentic Workflows](https://github.com/githubnext/gh-aw?tab=readme-ov-file).
+A fork inspired by [The Agentics](https://github.com/githubnext/agentics) - a family of reusable [GitHub Agentic Workflows](https://github.com/githubnext/gh-aw?tab=readme-ov-file) that will be adopted into the **darbot framework**.
 
-> [!WARNING]
-> GitHub Agentic Workflows are a research demonstrator, and these workflows are samples only.
+> [!CAUTION]
+> **Research Tool Warning**: This is a research demonstrator and experimental tool. These workflows are samples only and should be used with caution. While executed within GitHub Actions in a relatively sandboxed environment, they operate with network access and require careful configuration. Always review and test workflows thoroughly before deployment in production environments.
+
+## 🔗 Darbot Framework Integration
+
+This repository represents workflows that will be integrated into the **darbot framework** - an intelligent automation platform for development workflows. The darbot framework aims to provide robust, production-ready implementations of these agentic workflow patterns with enhanced security, monitoring, and enterprise features.
+
+**Current Status**: These workflows are being evaluated and adapted for inclusion in the darbot framework. While functional as research demonstrations, they will undergo significant hardening and enhancement as they transition to production-ready darbot components.
 
 ## 📂 Available Workflows
 
@@ -24,7 +30,7 @@ A sample family of reusable [GitHub Agentic Workflows](https://github.com/github
 The [weekly research workflow](workflows/weekly-research.md?plain=1) will run each Monday morning to collect research updates from the team and post them to a new issue in the repository. You can edit the workflow to adjust the topics, length and texture of the report. 
 
 ```bash
-gh aw add weekly-research -r githubnext/agentics --pr
+gh aw add weekly-research -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -57,7 +63,7 @@ gh aw run weekly-research
 The [daily team status workflow](workflows/daily-team-status.md?plain=1) will run daily to assess activity in the repository and create a status report issue. You can edit the workflow to adjust the topics and texture of the report. 
 
 ```bash
-gh aw add daily-team-status -r githubnext/agentics --pr
+gh aw add daily-team-status -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -85,7 +91,7 @@ gh aw run daily-team-status
 The [daily plan workflow](workflows/daily-plan.md?plain=1) will run daily to update a planning issue for the team. This planning issue can be used by other workflows as a reference for what the team is working on and what the current priorities are. You can edit the workflow to adjust the planning and report. 
 
 ```bash
-gh aw add daily-plan -r githubnext/agentics --pr
+gh aw add daily-plan -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -114,7 +120,7 @@ gh aw run daily-plan
 The [issue triage workflow](workflows/issue-triage.md?plain=1) will run daily to triage issues and pull requests in the repository.
 
 ```bash
-gh aw add issue-triage -r githubnext/agentics --pr
+gh aw add issue-triage -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. You can't start a run of this workflow directly as it is triggered in the context of an issue.
@@ -148,7 +154,7 @@ The samples in this repo include workflows that can help with coding tasks, such
 The [daily dependency updater workflow](workflows/daily-dependency-updates.md?plain=1) will run daily to check for Dependabot alerts in the repository and update dependencies to the latest versions, creating pull requests as necessary.
 
 ```bash
-gh aw add daily-dependency-updates -r githubnext/agentics --pr
+gh aw add daily-dependency-updates -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -180,7 +186,7 @@ gh aw run daily-dependency-updates
 The [update documentation workflow](workflows/update-docs.md?plain=1) will run on each push to main to try to update documentation in the repository. It defaults to using [Astro Starlight] (https://starlight.astro.build) for documentation generation, but you can edit it to use other frameworks if necessary.
 
 ```bash
-gh aw add update-docs -r githubnext/agentics --pr
+gh aw add update-docs -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -214,7 +220,7 @@ gh aw run update-docs
 The [daily QA workflow](workflows/daily-qa.md?plain=1) will run daily to perform quality assurance tasks in the repository, such as following the instructions in the README.md, tutorials and walkthroughs to check that the code builds and runs, and that the getting started process is simple and works well. You can edit and configure the workflow to describe more tasks. 
 
 ```bash
-gh aw add daily-qa -r githubnext/agentics --pr
+gh aw add daily-qa -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
@@ -245,7 +251,7 @@ gh aw run daily-qa
 The [daily accessibility review workflow](workflows/daily-accessibility-review.md?plain=1) will run daily to perform accessibility reviews of the application.
 
 ```bash
-gh aw add daily-accessibility-review -r githubnext/agentics --pr
+gh aw add daily-accessibility-review -r darbotlabs/Darbot-AWA --pr
 ```
 
 This creates a pull request to add the workflow to your repository. After merging the PR and syncing to main, you can start a run of this workflow immediately by running:
